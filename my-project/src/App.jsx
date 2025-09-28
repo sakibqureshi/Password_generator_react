@@ -61,15 +61,15 @@ function App() {
           readOnly
           className="w-full p-2 border border-gray-600 rounded bg-amber-50 text-black"
           placeholder="Your Generated Password"
-           useRef={passRef}
+           ref={passRef}
         />
-        <button onClick={copytoclip()} className='bg-blue-500 text-white px-4 py-2 rounded'>Copy</button>
+        <button onClick={copytoclip} className='bg-blue-500 text-white px-4 py-2 rounded'>Copy</button>
       </div>
       <div className="mb-4 flex flex-col gap-4">
         <div className='flex items-center gap-2'>
           <input type="range" min="8" max="32"
            value={length}
-           onChange={(e)=>setLength(e.target.value)}
+           onChange={(e) => setLength(Number(e.target.value))}
             className="w-1/2 cursor-pointer"
            
 
